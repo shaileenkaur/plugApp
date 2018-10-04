@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+        <link href="bootstrap/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+        <link href="bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="jquery/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+      <h1>Batter Plugin</h1>
+
+
+      <script>
+      document.addEventListener("deviceready",onDeviceReady,false);
+      function onDeviceReady()
+      {
+          window.addEventListener("batterylow",OnBatteryLow,false);
+      }
+
+      function OnBatteryLow(status)
+      {
+          alert("battery level is : " + status.level + status.isPlugged);
+      }
+      </script>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+    </body>
+</html>
